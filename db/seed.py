@@ -1,3 +1,4 @@
+from app import db
 from app.models import Hero, Powers, HeroPowers
 import random
 
@@ -5,6 +6,7 @@ import random
 print("🦸‍♀️ Seeding powers...")
 
 # This is an array of dictionary objects, each rep a power
+
 powers_data = [
     {"power_name": "super strength"},
     {"power_name": "flight"},
@@ -45,6 +47,7 @@ for hero in heroes_data:
 
 # commits the current db session and saves the changes that are made
 db.session.commit()
+
 # prints out to show the process of adding powers to heroes
 print("🦸‍♀️ Adding powers to heroes...")
 # defining  strengths each hero can have
